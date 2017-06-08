@@ -1,4 +1,4 @@
-int displayWidth=600, displayHeight=1000;
+int displayWidth=600,displayHeight =1000;
 // Game State
 // 0 -- Start Screen
 // 1 -- Game Running Screen
@@ -19,7 +19,7 @@ float dragCoeff = 0.03;
 color bgColor = color(255,253,231);
 
 // Player Parameters
-float playerX, playerY;
+float playerX=random(100,500), playerY=random(100,900);
 float playerVx, playerVy;
 float playerRadius = 20;
 color playerColor = color(179,157,219);

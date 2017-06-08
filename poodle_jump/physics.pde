@@ -1,6 +1,11 @@
 void updatePlayerVelocity() {
   // Update Player Velocities according to keys pressed
   // Apply Gravity and Air Drag
+  playerVy+=gravity;
+ for(int i=0;i<5;i++)
+ {
+  playerVx+=pow(dragCoeff,i);
+ }
 }
 
 void updatePlayerPosition() {

@@ -5,22 +5,43 @@ void setup() {
 }
 
 void draw() {
-  
+  drawStartScreen();
+  drawLoseScreen();
+ 
 }
 
 void drawStartScreen() {
+  fill(startColor);
+  text("Start",displayWidth/2,displayHeight/2);
+  drawGameScreen();
+  drawPlayer();
+  drawPlatforms();
 }
 
 void drawLoseScreen() {
 }
 
 void drawGameScreen() {
+    background(bgColor);
+
 }
 
 void drawPlayer() {
+  playerX=displayWidth/2;
+  playerY=displayHeight/2;
+  playerVx = 0;
+  playerVy = 0;
+  fill(playerColor);
+  
+  ellipse(playerX, playerY,2*playerRadius, 2*playerRadius);
+  
 }
 
 void drawPlatforms() {
+  
+  fill(platformColor);
+  delay(300);
+  rect(random(100,500),random(100,900),platformLength,platformHeight);
 }
 
 void resetGame(){
