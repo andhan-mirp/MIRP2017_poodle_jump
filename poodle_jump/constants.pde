@@ -1,3 +1,4 @@
+int x,y,i,j;
 int displayWidth=600,displayHeight =1000;
 // Game State
 // 0 -- Start Screen
@@ -5,13 +6,15 @@ int displayWidth=600,displayHeight =1000;
 // 2 -- Lose Screen
 int gameState = 0;
 
+
+
 // Velocity Constants
 float PLAYER_HORIZ_VELOCITY = 20;
 float PLAYER_VERT_VELOCITY = 35;
 float MAX_VERT_VELOCITY = 15;
 
 // Physical Constants
-float gravity = 1.0;
+float gravity = 2.0;
 float restitutionCoeff = 0.95;
 float dragCoeff = 0.03;
 
@@ -19,7 +22,7 @@ float dragCoeff = 0.03;
 color bgColor = color(255,253,231);
 
 // Player Parameters
-float playerX=random(100,500), playerY=random(100,900);
+float  playerX=displayWidth/2 , playerY=displayHeight/2;
 float playerVx, playerVy;
 float playerRadius = 20;
 color playerColor = color(179,157,219);
@@ -48,4 +51,5 @@ color loseColor = color(93,64,55);
 // Keyboard Controls
 char LEFT = 'a', RIGHT = 'd', UP = 'w';
 char RESET = 'r', PAUSE = 'p', START = 's';
-boolean left, right, up, reset, pause, start;
+boolean left, right, up, reset, pause, start = false;
+boolean keys[] = new boolean[6];
